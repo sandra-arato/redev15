@@ -1,0 +1,294 @@
+body {
+	font-family: 'Proxima Nova', 'Helvetica Neue', sans-serif;
+	background: #2f4c6a;
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #657789), color-stop(100%, #042b51));
+	background: -webkit-radial-gradient(center, circle cover, #657789 0%, #042b51 100%);
+	background: radial-gradient(center, circle cover, #657789 0%, #042b51 100%);
+	background-color: #2f4c6a; 
+}
+
+header {
+	text-align: right;
+	padding: 0.6em;
+}
+
+header a {
+	color: #13DAEC;
+	text-decoration: none;
+	-webkit-transition: color 0.15s ease;
+	transition: color 0.15s ease; 
+}
+
+header a:hover, a:focus {
+	color: #71ebf4;
+	text-shadow: none;
+	border: none;
+}
+
+.tools img.highlight, .highlight {
+	padding: 0 0.4em;
+	background-color: rgba(255,255,255, 0.7);
+	object-position: 0 3px;
+}
+
+.section-footer {
+	position: relative;
+	bottom: 0;
+	text-align: left;
+}
+
+.section-footer p {
+	margin-top: 4em;
+	font-size: 50%;
+}
+
+.reveal section img {
+	border: none;
+	box-shadow: none;
+	max-width: 4em;
+	background: transparent;
+}
+
+ul.speach {
+	margin: 0;
+	margin-top: -0.4em;
+}
+
+figure.speach, p.speach {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 30%;
+	padding-left: 4%;
+	vertical-align: top;
+}
+
+p.speach {
+	font-size: 2em;
+	margin-top: 1em;
+	padding-left: 0;
+}
+
+figure.speach img {
+	width: 4em;
+	height: 4em;
+	object-fit: cover;
+	object-position: 50% 10%;
+}
+
+.speach figcaption {
+	color: #222;
+	display: inline-block;
+	position: relative;
+	background: #fff;
+	border: 3px solid #222;
+	border-radius: 13px;
+	font-size: 0.6em;
+	padding: 0.4em 0.6em;
+}
+
+.speach figcaption:after, .speach figcaption:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.speach figcaption:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 16px;
+	margin-left: -16px;
+}
+.speach figcaption:before {
+	border-color: rgba(34, 34, 34, 0);
+	border-bottom-color: #222;
+	border-width: 20px;
+	margin-left: -20px;
+}
+
+.speach p {
+	font-size: 80%;
+}
+
+.speach ul {
+	/*margin: 0;*/
+	font-size: 50%;
+}
+
+figure.ref {
+	display: inline-block;
+	box-sizing: border-box;
+	max-width: 30%;
+	margin: 0 2%;
+	vertical-align: top;
+}
+
+.ref img {
+	width: 4em;
+	height: 4em;
+	object-fit: cover;
+	object-position: 50% 10%;
+}
+
+div:last-child .ref img {
+	height: auto;
+	margin-top: 1em;
+}
+
+.ref figcaption {
+	font-size: 55%;
+}
+
+
+.col {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 49%;
+}
+
+.col p {
+	font-weight: 800;
+}
+
+.col ul {
+	margin-left: 0;
+	text-align: center;
+}
+
+.col li {
+	list-style: none;
+}
+
+.reveal section .large {
+	max-width: 40%;
+	margin-right: 2em;
+}
+
+.tools div, .tools > figure {
+	display: inline-block;
+	box-sizing: border-box;
+	max-width: 8em;
+	vertical-align: top;
+	margin: 0 0.4em;
+	text-align: center;
+}
+
+.tools:last-child {
+	margin-top: 1.2em;
+}
+
+.reveal .tools img {
+	height: 2em;
+	margin-bottom: 0;
+}
+
+.reveal .tools p, .reveal .tools figcaption {
+	margin: 0.2em 0;
+	font-size: 0.6em;
+}
+
+.reveal .tools .phantomas {
+	width: 2em;
+	object-fit: cover;
+	border-radius: 1em;
+}
+
+.reveal ol {
+	margin-left: 2em;
+}
+
+.wordcloud span {
+	display: inline-block;
+	font-size: 0.6em;
+	padding: 0.4em;
+	background: #fff;
+	color: #222;
+	border: 3px solid #222;
+	margin-top: 1.4em;
+}
+
+.faces {
+	position: relative;
+	width: 600px;
+	min-width: 600px;
+	height: 600px;
+	/*background: red;*/
+	text-align: center;
+}
+
+.reveal .faces {
+	margin: 0 auto;
+	margin-top: -2em;
+}
+
+.faces span {
+	position: absolute;
+	display: inline-block;
+	max-width: 70%;
+	top: 250px;
+	left: 250px;
+	margin: 8% 0 0 -12.5%;
+	width: 50%;
+}
+
+.faces img {
+	position: absolute;
+}
+
+.faces img:nth-child(1) {
+	top: 89px;
+	left: 442px;
+}
+
+.faces img:nth-child(2) {
+	top: 250px;
+	left: 500px;
+}
+
+.faces img:nth-child(3) {
+	top: 411px;
+	left: 442px;
+}
+
+.faces img:nth-child(4) {
+	top: 496px;
+	left: 293px;
+}
+
+.faces img:nth-child(5) {
+	top: 467px;
+	left: 125px;
+}
+
+.faces img:nth-child(6) {
+	top: 336px;
+	left: 15px;
+}
+
+.faces img:nth-child(7) {
+	top: 164px;
+	left: 15px;
+}
+
+.faces img:nth-child(8) {
+	top: 33px;
+	left: 125px;
+}
+
+.faces img:nth-child(9) {
+	top: 4px;
+	left: 293px;
+}
+
+.reveal .final h3 {
+	margin-top: 2em;
+}
+
+.reveal .final p {
+	font-size: 0.8em;
+	line-height: 0.6em;
+}

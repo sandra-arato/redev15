@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Performance Budgeting For A Seamless User Experience</title>
+
+		<meta name="description" content="Performance Budgeting For A Seamless User Experience">
+		<meta name="author" content="Sandra Szenti">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<header>
+			<a href="http://twitter.com/whatevertechno">@whatevertechno</a>
+		</header>
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- INTRO -->
+				<section>
+					<h1>Performance Budgeting</h1>
+					<h3>For A Seamless User Experience</h3>
+					<p>
+						<a href="http://sandra.idoescode.com">Sandra Szenti</a>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Performance</h2>
+						<h3>Friend or Foe?</h3>
+						<p class="fragment">
+							Technology should improve the quality of life
+						</p>
+						<ul class="fragment">
+							<li>achieve our tasks quicker, more efficiently</li>
+							<li>allow access to any information</li>
+							<li>equal rights across locations (and nations)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Percieved performance</h2>
+						<div class="fragment">
+							<p class="speach"><a href="http://www.mcrinc.com/Documents/Newsletters/201110_why_web_performance_matters.pdf">2s</a></p>
+							<p class="speach"><a href="http://www.mcrinc.com/Documents/Newsletters/201110_why_web_performance_matters.pdf">40%</a></p>
+							<p class="speach"><a href="http://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2014/01/55-web-performance-stats-youll-want-to-know/">85%</a></p>
+						</div>
+						
+					</section>
+					<section>
+						<h3>#perfmatters</h3>
+						<p>Faster web experience</p>
+						<p>Easier steps</p>
+						<p>No blockers</p>
+					</section>
+					
+				</section>
+
+				<!-- THE PROBLEM -->
+				<section>
+					<section>
+						<h2>The user</h2>
+						<figure class="speach">
+							<img src="img/noun_98560_cc.svg" onerror="this.src='img/noun_98560_cc.png'; this.onerror=null;" alt="monster avatar of a confused user">
+							<figcaption>I don't have high speed internet</figcaption>
+						</figure>
+						<figure class="speach">
+							<img src="img/noun_98555_cc.svg" onerror="this.src='img/noun_98555_cc.png'; this.onerror=null;" alt="monster avatar of a worrying user">
+							<figcaption>I trust more in a smooth experience</figcaption>
+						</figure>
+						<figure class="speach circle">
+							<img src="img/noun_98567_cc.svg" onerror="this.src='img/noun_98567_cc.png'; this.onerror=null;" alt="monster avatar of a nerdy user">
+							<figcaption>I use my mobile for everything</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Let's solve their problem together!</h2>
+						<p>Performance should be a part of the conversation.</p>
+						<p>From beginning to end.</p>
+					</section>
+					<section>
+						<figure class="speach">
+							<img src="img/noun_98552_cc.svg" onerror="this.src='img/noun_98552_cc.png'; this.onerror=null;" alt="monster avatar of a project manager">
+							<figcaption>I want to promote performance in my company</figcaption>
+							<p>PM || Tech lead</p>
+							<ul class="fragment">
+								<li>Perf should be a requirement</li>
+								<li>It's a long-term benefit</li>
+								<li>Realistic benefits on mid-term project</li>
+							</ul>
+						</figure>
+						<figure class="speach">
+							<img src="img/noun_98551_cc.svg" onerror="this.src='img/noun_98551_cc.png'; this.onerror=null;" alt="monster avatar of a developer">
+							<figcaption>I want to capture and enhance performance in projects</figcaption>
+							<p>Developer</p>
+							<ul class="fragment">
+								<li>Collaboration is key</li>
+								<li>Don't hesitate to customise</li>
+								<li>Test and automate</li>
+							</ul>
+						</figure>
+						<figure class="speach">
+							<img src="img/noun_98564_cc.svg" onerror="this.src='img/noun_98564_cc.png'; this.onerror=null;" alt="monster avatar of a designer">
+							<figcaption>I want to understand more about performance</figcaption>
+							<p>UX || Designer</p>
+							<ul class="fragment">
+								<li>User Experience is a package</li>
+								<li>Good performance <em>is</em> good design</li>
+								<li>Asset optimisation is a requirement</li>
+							</ul>
+						</figure>
+					</section>
+					<section>
+						<h2>Assembling a performance budget</h2>
+						<p class="fragment">A performance budget is a tool for <em>identifing a problem</em>.</p>
+						<p class="fragment">It's a constraint that can keep the team in line.</p>
+						<p class="fragment">It can be used as a safety net integrated into production.</p>
+					</section>
+				</section>
+
+
+				<!-- WEB PERFORMANCE -->
+				<section>
+					<section>
+						<h2>Understanding web performance</h2>
+						<p class="fragment">
+							Loading performance
+						</p>
+						<div class="fragment">
+							<p>is affected by...</p>
+							<div class="col">
+								<p>Design</p>
+								<ul>
+									<li>number of assets</li>
+									<li>fonts</li>
+									<li>image sizes</li>
+									<li>resolutions</li>
+									<li>layout (mobile first?)</li>
+								</ul>
+							</div>
+
+							<div class="col">
+								<p>Development</p>
+								<ul>
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>Critical Rendering Path</li>
+									<li>number of assets</li>
+									<li>blocking assets</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<p>
+							Rendering performance
+						</p>
+						<div class="fragment">
+							<p>is affected by...</p>
+							<div class="col">
+								<p>Design</p>
+								<ul>								
+									<li>animations</li>
+									<li>interaction design</li>
+									<li>UI elements</li>
+								</ul>
+							</div>
+							<div class="col">
+								<p>Development</p>
+								<ul>
+									<li>JS</li>
+									<li>CSS</li>
+									<li>DOM manipulation</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- STEP ONE -->
+
+				<section>
+					<section>
+						<h2>Step one:</h2>
+						<h3>Understand the user</h3>
+						<figure>
+							<img src="img/noun_98553_cc.svg" onerror="this.src='img/noun_98553_cc.png'; this.onerror=null;" alt="monster avatar of a lost user">
+						</figure>
+					</section>
+					<section>
+						<h3>Analyse user behaviour</h3>
+						<blockquote class="fragment">
+							When pages get slower, conversion rates suffer. But some types of pages suffer more than others.
+							<footer>- <cite><a href="http://www.soasta.com/blog/website-monitoring-conversion-impact-score/">Tammy Everts</a></cite></footer>
+						</blockquote>
+						<p class="fragment">Conversion Impact Score - setup page priority</p>
+						<p class="fragment">User flow and conversion</p>
+					</section>
+					<section>
+						<h3>Technical constraints</h3>
+						<p>Preferred technology</p>
+						<p>Geographical location</p>
+						<p>Network characteristics</p>
+					</section>
+					<section>
+						<h3>Toolbox</h3>
+						<a href="https://www.stateoftheinternet.com/">
+							<img class="large" src="img/state-of-the-internet.png" alt="screenshot of the site: 'State of The Internet'">
+						</a>
+						<a href="http://www.google.com/analytics/">
+							<img src="img/google-analytics.svg" onerror="this.src='img/google-analytics.png'; this.onerror=null;" alt="logo of Google Analytics">
+						</a>
+						<a href="http://whatdoesmysitecost.com/">
+							<img class="large" src="img/what-does-my-site-cost.png" alt="screenshot of the site: 'What Does My Site Cost?'">
+						</a>
+					</section>
+					<section>
+						<h2>Results</h2>
+						<p>List of pages with priority</p>
+						<p>Technical environment</p>
+					</section>
+				</section>
+
+				<!-- STEP TWO -->
+				<section>
+					<section>
+						<h2>Step two:</h2>
+						<h3>Capture some data</h3>
+						<figure>
+							<img src="img/noun_98549_cc.svg" onerror="this.src='img/noun_98549_cc.png'; this.onerror=null;" alt="robotic avatar">
+						</figure>
+					</section>
+					<section>
+						<h3>Metrics</h3>
+						<div class="wordcloud">
+							<span>first byte</span>
+							<span>page load time</span>
+							<span>DOM content loaded</span>
+							<span>speed index</span>
+							<span>visually complete</span>
+							<span>number of requests</span>
+							<span>PSI score</span>
+							<span><em>custom metrics</em></span>
+						</div>
+					</section>
+					<section>
+						<h2>Loading performance</h2>
+						<div class="tools fragment">
+							<div>
+								<figure>
+									<img src="img/logo_wpt.png" alt="logo of WebPageTest">
+									<figcaption><a href="http://www.webpagetest.org/">WebPageTest</a></figcaption>
+								</figure>
+								<p>Location and connection</p>
+								<p>Get filmstrip view</p>
+								<p>Compare sites</p>
+							</div>
+
+							<div>
+								<figure>
+									<img src="img/logo_psi.png" alt="logo of PageSpeed Insights">
+									<figcaption><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a></figcaption>
+								</figure>
+								<p>Colour coded result</p>
+								<p>Suggestions</p>
+								<p>Chrome extension</p>
+							</div>
+							<div>
+								<figure>
+									<img src="img/logo_yl.png" alt="logo of Yellow Lab Tools">
+									<figcaption><a href="http://yellowlab.tools/">Yellow Lab Tools</a></figcaption>
+								</figure>
+								<p>Colours and metrics</p>
+								<p>JS Profiler</p>
+							</div>
+						</div>
+						<div class="tools fragment">
+							<div>
+								<figure>
+									<img src="img/logo_ssio.png" alt="logo of Sitespeed.io">
+									<figcaption><a href="http://sitespeed.io/">SiteSpeed.io</a></figcaption>
+								</figure>
+							</div>
+							<div>
+								<figure>
+									<img class="phantomas" src="img/phantomas.jpeg" alt="face of Fantomas">
+									<figcaption><a href="https://github.com/macbre/phantomas">Phantomas</a></figcaption>
+								</figure>
+							</div>
+							<div>
+								<figure>
+									<img src="img/logo_grunt.svg" onerror="this.src='img/logo_grunt.png'; this.onerror=null;" alt="logo of Grunt">
+									<figcaption><a href="https://github.com/tkadlec/grunt-perfbudget">grunt-perfbudget</a></figcaption>
+								</figure>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Rendering performance</h2>
+						<div class="tools fragment">
+							<figure>
+								<img src="img/justice.png" alt="graph generated by justice">
+								<figcaption><a href="http://okor.github.io/justice/">justice.js</a></figcaption>
+							</figure>
+							<figure>
+								<img src="img/memory-stats.png" alt="logo of Grunt">
+								<figcaption><a href="https://github.com/mrdoob/stats.js">memory-stats.js</a></figcaption>
+							</figure>
+							<figure>
+								<img src="img/css-triggers.png" alt="screenshot of CSS triggers">
+								<figcaption><a href="csstriggers.com">CSS Triggers</a></figcaption>
+							</figure>
+							
+						</div>
+						<div class="tools fragment">
+							<figure>
+								<img src="img/chrome_dt.png" alt="Chrome logo">
+								<figcaption><a href="https://developer.chrome.com/devtools/docs/timeline">Chrome</a></figcaption>
+							</figure>
+							<figure>
+								<img src="img/safari_logo.png" alt="Safari logo">
+								<figcaption><a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Instruments/Instruments.html">Safari</a></figcaption>
+							</figure>
+							<figure>
+								<img src="img/edge_logo.png" alt="Edge logo">
+								<figcaption><a href="https://msdn.microsoft.com/en-us/library/dn255009(v=vs.85).aspx">Edge</a></figcaption>
+							</figure>
+							<figure>
+								<img src="img/ff_logo.png" alt="Firefox Developer Edition logo">
+								<figcaption><a href="https://developer.mozilla.org/en-US/docs/Tools/Performance">Firefox DE</a></figcaption>
+							</figure>
+						</div>
+					</section>
+
+					<section>
+						<h2>Toolbox</h2>
+
+						<div class="tools">
+							<div>
+								<figure>
+									<img src="img/logo_ptt.svg" onerror="this.src='img/logo_ptt.png'; this.onerror=null;" alt="logo of perf-tooling.today">
+									<figcaption><a href="http://perf-tooling.today/tools">perf-tooling.today</a></figcaption>
+								</figure>
+								<p>137 tools</p>
+							</div>
+
+							<div>
+								<figure>
+									<img class="highlight" src="img/logo_pr.svg" onerror="this.src='img/logo_pr.png'; this.onerror=null;" alt="logo of Perf Rocks">
+									<figcaption><a href="http://perf.rocks/tools/">Perf Rocks</a></figcaption>
+								</figure>
+								<p>75 tools</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Results</h2>
+						<p>Metrics of different pages</p>
+						<p>Ideas on how to improve</p>
+					</section>
+					
+				</section>
+
+				<!-- STEP THREE -->
+				<section>
+					<section>
+						<h2>Step three:</h2>
+						<h3>Iterate over time</h3>
+						<figure>
+							<img src="img/noun_98554_cc.svg" onerror="this.src='img/noun_98554_cc.png'; this.onerror=null;" alt="smiling monster face">
+						</figure>
+					</section>
+					<section>
+						<h2>It's a learning curve</h2>
+						<ol>
+							<li>Focus on low hanging fruits</li>
+							<li>Understand the impacts of changes</li>
+							<li>Transfer knowledge</li>
+							<li>Monitor and improve</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Toolbox</h2>
+						<div>
+							<figure class="ref">
+								<img src="img/perfschool.png" alt="terminal based performance tutorial">
+								<figcaption class="ref"><a href="https://github.com/bevacqua/perfschool">npm install perfschool</a></figcaption>
+							</figure>
+							<figure class="ref">
+								<img src="img/designing-for-perf.png" alt="Book cover">
+								<figcaption class="ref"><a href="http://designingforperformance.com/">Designing for Performance</a> by Lara Hogan</figcaption>
+							</figure>
+						</div>
+						<div>
+							<figure class="ref">
+								<img src="img/path-to-perf.png" alt="Path to perf logo">
+								<figcaption class="ref"><a href="http://pathtoperf.com/">Podcast about perf</a></figcaption>
+							</figure>
+							<figure class="ref">
+								<img src="img/grafana.png" alt="Book cover">
+								<figcaption class="ref"><a href="http://grafana.org/">Grafana</a></figcaption>
+							</figure>
+						</div>
+					</section>
+					<section>
+						<h2>Results</h2>
+						<p>Process for managing performance</p>
+						<p>Performance culture</p>
+					</section>
+				</section>
+
+				<!-- SUMMARY -->
+				<section>
+					<section>
+						<h1>Recap</h1>
+					</section>
+					<section>
+						<p>Embrace performance by changing your mindset.</p>
+					</section>
+					<section>
+						<ol>
+							<li>Understand the user</li>
+							<li>Measure what you can</li>
+							<li>Iterate and improve</li>
+						</ol>
+					</section>
+					<section>
+						<div class="faces">
+							<img src="img/noun_98560_cc.svg" onerror="this.src='img/noun_98560_cc.png'; this.onerror=null;" alt="monster avatar">
+							<img src="img/noun_98554_cc.svg" onerror="this.src='img/noun_98554_cc.png'; this.onerror=null;" alt="monster avatar">
+							<img src="img/noun_98549_cc.svg" onerror="this.src='img/noun_98549_cc.png'; this.onerror=null;" alt="monster avatar">
+							<img src="img/noun_98552_cc.svg" onerror="this.src='img/noun_98552_cc.png'; this.onerror=null;" alt="monster avatar">
+							<img src="img/noun_98553_cc.svg" onerror="this.src='img/noun_98553_cc.png'; this.onerror=null;" alt="monster avatar">
+							<img src="img/noun_98564_cc.svg" onerror="this.src='img/noun_98564_cc.png'; this.onerror=null;" alt="monster avatar">
+							<img src="img/noun_98551_cc.svg" onerror="this.src='img/noun_98551_cc.png'; this.onerror=null;" alt="monster avatar">
+							
+							<img src="img/noun_98555_cc.svg" onerror="this.src='img/noun_98555_cc.png'; this.onerror=null;" alt="monster avatar">
+							
+							<img src="img/noun_98567_cc.svg" onerror="this.src='img/noun_98567_cc.png'; this.onerror=null;" alt="monster avatar">
+							<span>Create awesome experiences</span>
+						</div>
+
+				</section>
+
+				<!-- THE END -->
+				<section>
+					<h1>Thanks</h1>
+					<p><a href="http://sandra.idoescode.com">Sandra Szenti</a></p>
+					<p><a href="http://twitter.com/whatevertechno"><em>@whatevertechno</em></a></p>
+					<div class="final">
+						<h3>Credits</h3>
+						<p>Stats: <a href="http://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2014/01/55-web-performance-stats-youll-want-to-know/">Tammy Everts</a></p>
+						<p>Avatars: <a href="https://thenounproject.com/Msabbagh/">Mohamad Sabbagh</a></p>
+					</div>
+					
+				</section>
+
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
